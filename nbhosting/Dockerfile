@@ -21,6 +21,9 @@ USER jovyan
 RUN npm install -g ijavascript
 RUN ijsinstall
 
+# for displaying html fragments
+RUN npm install -g jsdom d3
+
 # !!! clean up!!!
 USER root
 RUN apt-get autoremove -y python
