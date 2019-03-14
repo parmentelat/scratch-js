@@ -1,9 +1,5 @@
 # as of today this is python-3.7.1
-FROM jupyter/base-notebook:latest
-
-# for nbhosting
-USER root
-COPY start-in-dir-as-uid.sh /usr/local/bin
+FROM nbhosting/minimal-notebook
 
 # prerequisites with apt-get
 # we do install python(2) here because
