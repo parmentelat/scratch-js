@@ -24,4 +24,7 @@ RUN npm install -g jsdom d3
 USER root
 RUN apt-get autoremove -y python
 ENV PATH="/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+# somehow node won't find stuff installed by npm, this band-aid will aid
+ENV NODE_PATH="/opt/conda/lib/node_modules/"
 USER jovyan
