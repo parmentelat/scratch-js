@@ -32,4 +32,4 @@ USER jovyan
 
 
 # for displaying html fragments
-RUN npm install -g jsdom d3 ijavascript-plotly plotly-notebooks-js
+RUN npm install -g jsdom d3 ijavascript-plotly plotly-notebook-js
