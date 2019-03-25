@@ -1,5 +1,11 @@
+# to redo from scratch:
+#FROM jupyter/minimal-notebook:latest
+#USER root
+
 # as of today this is python-3.7.1
 FROM nbhosting/minimal-notebook
+
+
 
 
 # prerequisites with apt-get
@@ -26,7 +32,7 @@ RUN apt-get autoremove -y python
 ENV PATH="/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 
-# somehow node won't find stuff installed by npm, this band-aid will aid
+# somehow node won't find stuff installed by npm, this band-aid will help
 ENV NODE_PATH="/opt/conda/lib/node_modules/"
 USER jovyan
 
